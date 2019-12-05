@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 import socket
 
-host = "xxx.xxx.xxx.xxx" #お使いのサーバーのホスト名を入れます
-port = xxxx #クライアントで設定したPORTと同じもの指定してあげます
+host = sys.argv[1] #お使いのサーバーのホスト名を入れます
+port = int(sys.argv[2]) #クライアントで設定したPORTと同じもの指定してあげます
 
 serversock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
