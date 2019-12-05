@@ -17,4 +17,6 @@ s.listen(1)
 while True :
     conn, addr = s.accept()
     print('Connection address:', addr)
-    data = conn.recv(1024) #
+    conn.settimeout(3)
+    data = conn.recv(1024)
+    print(repr(data))
