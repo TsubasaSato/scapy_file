@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import socket
+import sys
 
 host = sys.argv[1] #お使いのサーバーのホスト名を入れます
 port = int(sys.argv[2]) #適当なPORTを指定してあげます
