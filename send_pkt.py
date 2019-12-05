@@ -17,8 +17,7 @@ RST=TCP(sport=sport,dport=dport,flags='R')
 send(ip/RST)
 
 # SYN
-send(ip/SYN)
-SYNACK=
+SYNACK=sr1(ip/SYN)
 # reply packet may be syn=1,Ack=1,AckNo=1001,seq=0(random)
 # ACK
 ACK=TCP(sport=sport, dport=dport, flags='A', seq=1001, ack=SYNACK.seq + 1)
