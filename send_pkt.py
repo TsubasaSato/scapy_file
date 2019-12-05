@@ -13,7 +13,7 @@ SYN=TCP(sport=sport,dport=dport,flags='S',seq=1000)
 send(ip/SYN)
 
 # RST
-RST=SYN.flags='R'
+RST=TCP(sport=sport,dport=dport,flags='R')
 send(ip/RST)
 
 # SYN
